@@ -1,0 +1,113 @@
+$bg: rgb(16, 16, 16);
+
+
+.banner {
+    height: 450px;
+    background-color: $bg ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3rem;
+    box-sizing: border-box;
+
+    &::after {
+        content: "";
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        position: absolute;
+        background: $bg;
+        opacity: 0.4;
+    }
+
+    h1,
+    p {
+        font-size: 2rem;
+        width: 40%;
+        color: white;
+        z-index: 10;
+    }
+
+    p {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        font-weight:400
+    }
+
+    >div {
+        display: flex;
+
+        button {
+            padding: 0.5rem;
+            width: 140px;
+            outline: none;
+            border: none;
+            z-index: 10;
+            border-radius: 5px;
+            margin: 1rem;
+            background-color: white;
+            color: black;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &:nth-child(odd) {
+                background-color: rgb(41, 41, 41);
+                color: white;
+            }
+
+            &:nth-child(even) {
+                background-color: lightgray;
+                color: rgb(46, 46, 46);
+            }
+
+
+            svg {
+                font-size: 1.7rem;
+                margin: 0 10px;
+                
+            }
+        }
+    }
+
+
+
+
+
+}
+
+.row {
+    padding: 1rem;
+    background-color: $bg;
+
+
+    >h2 {
+        font-weight: 500;
+        margin: 0.3rem;
+    }
+
+    >div {
+        display: flex;
+        // justify-content: center;
+        overflow-x: auto;
+    }
+}
+
+.card {
+    width: 200px;
+    cursor: pointer;
+    margin: 0.3rem;
+    animation: 1s ease infinite;
+    transition: transform 0.5;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
